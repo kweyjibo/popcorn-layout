@@ -1,0 +1,61 @@
+/* --------------- Vars -------------------- */
+
+@import "../vars";
+
+/* --------------- /vars -------------------- */
+
+/* --------------- Common -------------------- */
+
+.header {
+    padding-bottom: $shift*6;
+    border-bottom: 5px solid $main-color;
+}
+
+.logo_lk {
+    display: block;
+    width: 400px;
+    height: 52px;
+
+    background-image: url('../res/logo.png');
+}
+
+.user-details_ava {
+    padding-left: $shift*2;
+    width: 40px;
+}
+
+.user-details_ava_lk {
+    height: 34px;
+    background-color: #f0f0f0;
+}
+
+.user-details_ava_lk,
+.user-details_ava_i {
+    display: block;
+}
+
+.user-details_lk {
+    font-size: 13px;
+    color: #000;
+
+    & + & {
+        margin-left: $shift*2;
+    }
+}
+
+.user-details_name {
+    padding-bottom: 2px;
+}
+
+.user-details_name_lk {
+    font-size: 18px;
+    font-weight: bold;
+    color: $main-color;
+}
+
+.user-details_count {
+    padding-left: $shift;
+    color: $main-color;
+}
+
+/* ---------------/common -------------------- */
