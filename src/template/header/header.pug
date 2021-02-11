@@ -9,13 +9,26 @@ header(class='header')
         mixin navLink(title, url, count)
             a(href=url, class="nav-main_lk")= title
             if count
-                span(class="nav-main_count") 233
+                span(class="nav-main_count")= count
 
         +navLink('news', '#')
         +navLink('culture', '#')
-        +navLink('celebrity', '#')
-        +navLink('travel', '#')
+        +navLink('ads', '#')
+        +navLink('follow', '#')
         +navLink('users', '#', '233')
         +navLink('rules', '#')
         +navLink('your.style', '#')
         +navLink('FAQ', '#')
+
+    nav(class="nav-menu")
+        mixin navMenu(title, url, flag)
+                a(href=url, class=flag ? "nav-menu_lk __active" : "nav-menu_lk")= title
+
+        +navMenu('home', '#', true)
+        +navMenu('fashion', '#')
+        +navMenu('about', '#')
+        +navMenu('travel', '#')
+        +navMenu('users', '#')
+        +navMenu('rules', '#')
+        +navMenu('your.style', '#')
+        +navMenu('FAQ', '#')

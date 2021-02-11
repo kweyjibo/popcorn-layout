@@ -24,3 +24,27 @@
     color: $main-color;
     cursor: default;
 }
+
+.nav-menu {
+    padding-top: $shift*3;
+}
+
+.nav-menu_lk {
+    display: inline-block;
+    padding: 1px 2px;
+
+    font-size: 13px;
+    color: #000;
+
+    &:not(.__active):hover {
+        text-decoration: underline;
+    }
+
+    &.__active {
+        background-color: #fdeaf4;
+    }
+
+    & + & {
+        margin-left: $shift*2;
+    }
+}
