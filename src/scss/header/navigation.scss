@@ -1,0 +1,26 @@
+/* --------------- Vars -------------------- */
+
+@import "../vars";
+
+/* --------------- /vars -------------------- */
+
+.nav-main {
+    padding-top: $shift*3;
+}
+
+.nav-main_lk {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+
+    & + & {
+        margin-left: $grid;
+    }
+}
+
+.nav-main_count {
+    padding-right: $grid;
+    padding-left: $shift;
+    color: $main-color;
+    cursor: default;
+}
