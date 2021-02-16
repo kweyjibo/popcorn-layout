@@ -1,0 +1,31 @@
+div(div class="top-news mt-20")
+
+    mixin topNewsPic(src, url)
+        div(class="top-news_pic")
+            a(href=url)
+                img(class="top-news_pic_i", src=src)
+
+    +topNewsPic('../res/pic1.jpg', '#')
+    +topNewsPic('../res/pic2.jpg', '#')
+    +topNewsPic('../res/pic3.jpg', '#')
+    +topNewsPic('../res/pic2.jpg', '#')
+    +topNewsPic('../res/pic1.jpg', '#')
+    +topNewsPic('../res/pic3.jpg', '#')
+
+    mixin topNews(url,title,text,count)
+        div(class="top-news_content")
+            a(href=url, class="top-news_lk")= title
+            div(class="top-news_block")
+                a(href=url, class="top-news_tx")= text
+            if (count)
+                div(class="top-news_comments")
+                    a(href="#", class="top-news_comments_lk") #{count}
+                    | comments
+
+    +topNews('#', 'Lorem ispum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', '5')
+    +topNews('#', 'Lorem ispum dolor sit amet, consectetur adipiscing', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit', '234')
+    +topNews('#', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit', 'Lorem ipsum dolor sit amet', '15')
+    +topNews('#', 'Lorem ispum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', '5')
+    +topNews('#', 'Lorem ispum dolor sit amet, consectetur adipiscing', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit', '234')
+    +topNews('#', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit', 'Lorem ipsum dolor sit amet', '15')
+    

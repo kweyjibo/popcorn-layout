@@ -1,0 +1,58 @@
+/* --------------- Vars -------------------- */
+
+@import "../vars";
+
+/* --------------- /vars -------------------- */
+
+.top-news {
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.top-news_content {
+    padding-top: $shift*4;
+
+    & + & {
+        padding-left: $shift*5;
+    }
+}
+
+.top-news_pic {
+    align-self: end;
+
+    & + & {
+        padding-left: $shift*5;
+    }
+}
+
+.top-news_pic_i {
+    display: block;
+}
+
+.top-news_lk {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    color: #000;
+}
+
+.top-news_block {
+    padding-top: $shift*2;
+}
+
+.top-news_tx {
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+}
+
+.top-news_comments {
+    padding-top: $shift*2;
+    color: $main_color;
+}
+
+.top-news_comments_lk {
+    padding-right: $shift;
+    color: $main_color;
+}
