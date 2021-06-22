@@ -1,0 +1,16 @@
+div(div class="top-news mt-20")
+
+    mixin topicItem(topicName)
+        div(class="topic-link")
+            a(href="", class="topic-link_a")=topicName
+
+    mixin topicTitle(title, count)
+        div(class="topic-title")
+            span(class="topic-title_main")=title
+            span(class="topic-title_count")=count
+
+    div(class="")
+        div(class="")
+            +topicTitle('Persons', '237')
+            +topicItem('Lalalala')
+            +topicItem('Bebebebe')
