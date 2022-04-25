@@ -20,10 +20,24 @@
     color: $main-color;
 }
 
-.topic-link + .topic-link {
-    margin-top: $shift*2;
-}
-
 .topic-link_a {
     color: #000;;
+}
+
+.topic-table {
+    display: flex;
+}
+
+.topic-table_section {
+    flex-basis: 33%;
+}
+
+.topic-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.topic-section_i {
+    flex: 50%;
 }
